@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp">
+
+    <TextView
+        android:id="@+id/aboutSimulatorViewID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text="Please enter values for duration of workout and distance travelled. If the average velocity is above 10 km/h (2.77 m/sec) an award will be given."
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/durationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/aboutSimulatorViewID"
+        android:layout_marginTop="44dp"
+        android:text="Duration"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/durationValueView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/durationView"
+        android:layout_toRightOf="@+id/durationView"
+        android:ems="5"
+        android:hint="seconds"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/distanceView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/durationView"
+        android:layout_marginTop="100dp"
+        android:text="Distance"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+    <EditText
+        android:id="@+id/distanceValueView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/durationValueView"
+        android:layout_alignTop="@+id/distanceView"
+        android:ems="5"
+        android:hint="meters"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/simulatorButtonView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:text="End" />
+
+
+</RelativeLayout>
