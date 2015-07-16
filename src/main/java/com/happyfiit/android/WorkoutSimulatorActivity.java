@@ -7,12 +7,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.happyfiit.sdk.HappyfiitCallbackHandler;
-import com.happyfiit.sdk.Happyfiit;
-import com.happyfiit.sdk.Reward;
-import com.happyfiit.sdk.exceptions.HappyfiitInitializationException;
-import com.happyfiit.sdk.Opportunity;
-import com.happyfiit.sdk.Workout;
+import com.happyfiit.android.sdk.Happyfiit;
+import com.happyfiit.android.sdk.HappyfiitCallbackHandler;
+import com.happyfiit.android.sdk.Opportunity;
+import com.happyfiit.android.sdk.Reward;
+import com.happyfiit.android.sdk.Workout;
+import com.happyfiit.android.sdk.exceptions.HappyfiitInitializationException;
+
 
 public class WorkoutSimulatorActivity extends Activity implements View.OnClickListener {
 

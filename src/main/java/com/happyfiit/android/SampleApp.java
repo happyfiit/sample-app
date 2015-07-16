@@ -2,11 +2,12 @@ package com.happyfiit.android;
 
 import android.app.Application;
 
-import com.happyfiit.sdk.ApplicationConfig;
-import com.happyfiit.sdk.FirstRunHandler;
-import com.happyfiit.sdk.Happyfiit;
-import com.happyfiit.sdk.Opportunity;
-import com.happyfiit.sdk.Workout;
+
+import com.happyfiit.android.sdk.ApplicationConfig;
+import com.happyfiit.android.sdk.FirstRunHandler;
+import com.happyfiit.android.sdk.Happyfiit;
+import com.happyfiit.android.sdk.Opportunity;
+import com.happyfiit.android.sdk.Workout;
 
 import java.util.ArrayList;
 import java.util.Arrays;
