@@ -41,7 +41,6 @@ android {
 dependencies {
 
     compile ('com.happyfiit:android-sdk:1.0.0-SNAPSHOT@aar') {
-        changing=true
         transitive=true
     }
 }

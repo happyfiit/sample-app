@@ -10,7 +10,7 @@ import android.widget.EditText;
 import com.happyfiit.android.sdk.Happyfiit;
 import com.happyfiit.android.sdk.HappyfiitCallbackHandler;
 import com.happyfiit.android.sdk.Opportunity;
-import com.happyfiit.android.sdk.Reward;
+import com.happyfiit.android.sdk.OpportunityResponse;
 import com.happyfiit.android.sdk.Workout;
 import com.happyfiit.android.sdk.exceptions.HappyfiitInitializationException;
 
@@ -78,7 +78,7 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
              * @param reward
              */
             @Override
-            public void onAchievement(Reward reward) {
+            public void onAchievement(OpportunityResponse reward) {
                 //1. Create a native to the application notification (optional)
 
                 //2. Show Happyfiit reward popup so that user can redeem it (required)
