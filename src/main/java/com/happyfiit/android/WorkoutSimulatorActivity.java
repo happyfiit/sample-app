@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.happyfiit.android.sdk.Happyfiit;
 import com.happyfiit.android.sdk.HappyfiitCallbackHandler;
@@ -90,5 +91,8 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
                 //handle exception
             }
         });
+
+        Toast.makeText(getApplicationContext(), "Uploading Data..",
+        Toast.LENGTH_SHORT).show();
     }
 }

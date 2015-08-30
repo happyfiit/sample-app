@@ -9,7 +9,7 @@ import com.happyfiit.android.sdk.Happyfiit;
 import com.happyfiit.android.sdk.Opportunity;
 import com.happyfiit.android.sdk.Workout;
 
-import org.joda.time.LocalDateTime;
+import org.joda.time.DateTime;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -58,7 +58,7 @@ public class SampleApp extends Application {
                         .addWorkoutStatistic("distance", "meter", "100")
                         .addWorkoutStatistic("duration", "sec", "10")
                         .addWorkoutStatistic("avg. speed", "km/h", new Double(100 / 10).toString())
-                        .time(new LocalDateTime(2015, 3, 26, 18, 0, 20))
+                        .time(new DateTime(2015, 3, 26, 18, 0, 20))
                         .build();
 
                 Workout workout2 = new Workout.Builder()
@@ -66,7 +66,7 @@ public class SampleApp extends Application {
                         .addWorkoutStatistic("distance", "meter", "100")
                         .addWorkoutStatistic("duration", "sec", "9")
                         .addWorkoutStatistic("avg. speed", "km/h", new Double(100 / 9).toString())
-                        .time(new LocalDateTime(2015, 3, 10, 18, 0, 0))
+                        .time(new DateTime(2015, 3, 10, 18, 0, 0))
                         .build();
 
                 List<Workout> workouts = new ArrayList<>(Arrays.asList(workout1, workout2));
