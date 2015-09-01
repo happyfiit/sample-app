@@ -62,7 +62,8 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
                         .type("running")
                         .addWorkoutStatistic("distance", "meter", meters)
                         .addWorkoutStatistic("duration", "sec", seconds)
-                        .addWorkoutStatistic("avg. speed", "km/h", new Double(Integer.parseInt(meters) / Integer.parseInt(seconds)).toString())
+                        .addWorkoutStatistic("avg. speed", "km/h", new Double(Double.parseDouble(meters) / Double
+                                .parseDouble(seconds)).toString())
                         .build())
                 .addParameter("pb", 10)
                 .build();
