@@ -13,7 +13,6 @@ import com.happyfiit.android.sdk.HappyfiitCallbackHandler;
 import com.happyfiit.android.sdk.Opportunity;
 import com.happyfiit.android.sdk.Reward;
 import com.happyfiit.android.sdk.Workout;
-import com.happyfiit.android.sdk.exceptions.HappyfiitInitializationException;
 
 
 public class WorkoutSimulatorActivity extends Activity implements View.OnClickListener {
@@ -33,18 +32,8 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
         // Register the onClick listener with the implementation above
         button.setOnClickListener(this);
 
-        try {
-            happyfiit = Happyfiit.getInstance();
-        } catch (HappyfiitInitializationException e) {
-            e.printStackTrace();
-        }
-
-        happyfiit.start(new HappyfiitCallbackHandler(this) {
-            @Override
-            public void onFailure(Exception ex) {
-
-            }
-        });
+        happyfiit = Happyfiit.getInstance();
+        happyfiit.start(this);
 
     }
 
@@ -94,6 +83,6 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
         });
 
         Toast.makeText(getApplicationContext(), "Uploading Data..",
-        Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_SHORT).show();
     }
 }
