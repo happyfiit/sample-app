@@ -20,9 +20,16 @@ repositories {
 }
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'alias_name'
+            keyPassword 'password'
+            storeFile file('my-release-key.keystore')
+            storePassword 'password'
+        }
+    }
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
-
     defaultConfig {
         applicationId "com.happyfiit.appsimulator"
         minSdkVersion 12
@@ -34,14 +41,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
 }
 
 dependencies {
-
-    compile ('com.happyfiit:android-sdk:1.0.0-SNAPSHOT@aar') {
-        transitive=true
+    compile('com.happyfiit:android-sdk:1.0.0-SNAPSHOT@aar') {
+        transitive = true
     }
 }
 
