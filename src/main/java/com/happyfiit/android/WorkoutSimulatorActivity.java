@@ -49,10 +49,10 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
         Opportunity op = new Opportunity.Builder()
                 .addWorkout(new Workout.Builder()
                         .type("running")
-                        .addWorkoutStatistic("distance", "meter", meters)
-                        .addWorkoutStatistic("duration", "sec", seconds)
+                        .addWorkoutStatistic("distance", "meter", Double.parseDouble(meters))
+                        .addWorkoutStatistic("duration", "sec", Double.parseDouble(seconds))
                         .addWorkoutStatistic("avg. speed", "km/h", new Double(Double.parseDouble(meters) / Double
-                                .parseDouble(seconds)).toString())
+                                .parseDouble(seconds)))
                         .build())
                 .addParameter("pb", 10)
                 .build();

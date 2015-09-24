@@ -55,17 +55,17 @@ public class SampleApp extends Application {
 
                 Workout workout1 = new Workout.Builder()
                         .type("running")
-                        .addWorkoutStatistic("distance", "meter", "100")
-                        .addWorkoutStatistic("duration", "sec", "10")
-                        .addWorkoutStatistic("avg. speed", "km/h", new Double(100 / 10).toString())
+                        .addWorkoutStatistic("distance", "meter", 100)
+                        .addWorkoutStatistic("duration", "sec", 10)
+                        .addWorkoutStatistic("avg. speed", "km/h", new Double(100 / 10))
                         .time(new DateTime(2015, 3, 26, 18, 0, 20))
                         .build();
 
                 Workout workout2 = new Workout.Builder()
                         .type("running")
-                        .addWorkoutStatistic("distance", "meter", "100")
-                        .addWorkoutStatistic("duration", "sec", "9")
-                        .addWorkoutStatistic("avg. speed", "km/h", new Double(100 / 9).toString())
+                        .addWorkoutStatistic("distance", "meter", 100)
+                        .addWorkoutStatistic("duration", "sec", 9)
+                        .addWorkoutStatistic("avg. speed", "km/h", new Double(100 / 9))
                         .time(new DateTime(2015, 3, 10, 18, 0, 0))
                         .build();
 
