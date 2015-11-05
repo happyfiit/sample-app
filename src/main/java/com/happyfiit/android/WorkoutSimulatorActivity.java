@@ -79,6 +79,8 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
             @Override
             public void onFailure(Exception ex) {
                 //handle exception
+                Toast.makeText(getApplicationContext(), ex.getMessage(),
+                        Toast.LENGTH_LONG).show();
             }
         });
 
