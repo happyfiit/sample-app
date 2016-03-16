@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
-        android:text="Please enter values for duration of workout and distance travelled. If the average velocity is above 10 km/h (2.77 m/sec) an award will be given."
+        android:text="Enter values for avg. speed and distance run below.."
         android:textAlignment="center"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/aboutSimulatorViewID"
         android:layout_marginTop="44dp"
-        android:text="Duration"
+        android:text="Average Speed"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <EditText
@@ -31,8 +31,8 @@
         android:layout_alignBaseline="@+id/durationView"
         android:layout_toRightOf="@+id/durationView"
         android:ems="5"
-        android:hint="seconds"
-        android:inputType="number" />
+        android:hint="km/h"
+        android:inputType="numberDecimal" />
 
     <TextView
         android:id="@+id/distanceView"
@@ -51,8 +51,8 @@
         android:layout_alignLeft="@+id/durationValueView"
         android:layout_alignTop="@+id/distanceView"
         android:ems="5"
-        android:hint="meters"
-        android:inputType="number" />
+        android:hint="km"
+        android:inputType="numberDecimal" />
 
     <Button
         android:id="@+id/simulatorButtonView"

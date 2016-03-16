@@ -40,19 +40,18 @@ public class WorkoutSimulatorActivity extends Activity implements View.OnClickLi
     // Implement the OnClickListener callback
     @Override
     public void onClick(View view) {
-        String seconds = ((EditText) findViewById(R.id.durationValueView)).getText().toString();
-        String meters = ((EditText) findViewById(R.id.distanceValueView)).getText().toString();
+        String avgSpeed = ((EditText) findViewById(R.id.durationValueView)).getText().toString();
+        String km = ((EditText) findViewById(R.id.distanceValueView)).getText().toString();
 
-        Log.d(TAG, "Seconds:" + seconds);
-        Log.d(TAG, "Distance:" + meters);
+        Log.d(TAG, "Avg. Speed:" + avgSpeed);
+        Log.d(TAG, "Distance:" + km);
 
         Opportunity op = new Opportunity.Builder()
                 .addWorkout(new Workout.Builder()
                         .type("running")
-                        .addWorkoutStatistic("distance", "meter", Double.parseDouble(meters))
-                        .addWorkoutStatistic("duration", "sec", Double.parseDouble(seconds))
-                        .addWorkoutStatistic("avg. speed", "km/h", new Double(Double.parseDouble(meters) / Double
-                                .parseDouble(seconds)))
+                        .addWorkoutStatistic("distance", "meter", Double.parseDouble(km) * 1000)
+                        .addWorkoutStatistic("avg. speed", "km/h", Double.parseDouble(avgSpeed))
+                        /*.addWorkoutStatistic("duration", "sec", new Double(Double.parseDouble(km) / Double.parseDouble(avgSpeed))*3600)*/
                         .build())
                 .addParameter("pb", 10)
                 .build();
